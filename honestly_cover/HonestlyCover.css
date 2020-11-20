@@ -1,0 +1,26 @@
+body {
+    background-color: black;
+    border-color: white;
+    border-width: .5em;
+    border-style: solid;
+    height: 400px;
+    width: 400px;
+
+}
+
+.nowe {
+    color: white;
+    font-size: 5em;
+    writing-mode: vertical-lr;
+
+}
+
+.honestly {
+    color: gold;
+    font-size: 5em;
+
+}
+
+#dummy {
+    color: black;
+}
