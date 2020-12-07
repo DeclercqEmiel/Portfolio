@@ -3,16 +3,17 @@ COLORS:
 */
 
 $backdrop: #021826;
-$accent1: #0B8C8C;
+$accent1: #12A6A6;
+$accent2: #F2F2F2;
 
 
 body {
     background: url(pic_trough_triangles.jpg);
     background-size: 20%;
     text-align: center;
-    color: white;
+    color: $accent2;
     font-family: Comic Sans;
-    height: 1000px;
+    height: 100%;
     margin-left: 20%;
     margin-right: 20%;
 }
@@ -110,22 +111,20 @@ a:hover {
     height: 30px;
     width: 30px;
     margin: 2px;
-    background-color: white;
     color: $backdrop;
     padding: 10 px;
     border-color: $accent1;
+
+    :focus { outline: none; }
 }
 
 .audioplayer-buttons {
     margin-bottom: 10px;
     margin-top: 20px;
 
+    :focus { 
+        outline: none; 
+    }
+    
 }
 
-.audioplayer-button:hover {
-    border-style: inset;
-}
-
-.audioplayer-button:visited {
-    border-style: none;
-}

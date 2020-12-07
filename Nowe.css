@@ -5,9 +5,9 @@ body {
   background: url(pic_trough_triangles.jpg);
   background-size: 20%;
   text-align: center;
-  color: white;
+  color: #F2F2F2;
   font-family: Comic Sans;
-  height: 1000px;
+  height: 100%;
   margin-left: 20%;
   margin-right: 20%;
 }
@@ -17,7 +17,7 @@ nav {
   background-color: #021826;
   padding: 1%;
   margin-top: 1%;
-  border: 7px double #0B8C8C;
+  border: 7px double #12A6A6;
 }
 
 #nav_title {
@@ -74,7 +74,7 @@ h3 {
       -ms-flex-pack: left;
           justify-content: left;
   font-size: 1.3em;
-  border: 7px double #0B8C8C;
+  border: 7px double #12A6A6;
 }
 
 .controls {
@@ -86,7 +86,7 @@ h3 {
 }
 
 a:hover {
-  color: #0B8C8C;
+  color: #12A6A6;
 }
 
 /*Audioplayer*/
@@ -117,10 +117,13 @@ a:hover {
   height: 30px;
   width: 30px;
   margin: 2px;
-  background-color: white;
   color: #021826;
   padding: 10 px;
-  border-color: #0B8C8C;
+  border-color: #12A6A6;
+}
+
+.audioplayer-button :focus {
+  outline: none;
 }
 
 .audioplayer-buttons {
@@ -128,11 +131,7 @@ a:hover {
   margin-top: 20px;
 }
 
-.audioplayer-button:hover {
-  border-style: inset;
-}
-
-.audioplayer-button:visited {
-  border-style: none;
+.audioplayer-buttons :focus {
+  outline: none;
 }
 /*# sourceMappingURL=Nowe.css.map */
