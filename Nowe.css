@@ -1,101 +1,107 @@
 /*
 COLORS: 
-#4299FF
-#3CB8E8
-#4EFBFF
-#3CE8BB
-#42FF98
 */
-
-
 body {
-    background: url(pic_trough_triangles.jpg);
-    background-size: 20%;
-    text-align: center;
-    color: white;
-    font-family: Comic Sans;
-    height: 1000px;
-    margin-left: 20%;
-    margin-right: 20%;
+  background: url(pic_trough_triangles.jpg);
+  background-size: 20%;
+  text-align: center;
+  color: white;
+  font-family: Comic Sans;
+  height: 1000px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 header,
 nav {
-    background-color: black;
-    padding: 1%;
-    margin-top: 1%;
-    border: 7px double #42FF98;
+  background-color: #021826;
+  padding: 1%;
+  margin-top: 1%;
+  border: 7px double #0B8C8C;
 }
 
 #nav_title {
-    font-size: 3em;
-    margin: 0px;
+  font-size: 3em;
+  margin: 0px;
 }
 
 header {
-    font-size: 7em;
-    padding: 2%;
+  font-size: 7em;
+  padding: 2%;
 }
 
 nav ul li {
-    font-size: 2em;
-    list-style-type: none;
-    display: inline-block;
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid white;
-    border-left: none;
-    border-right: none;
+  font-size: 2em;
+  list-style-type: none;
+  display: inline-block;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid white;
+  border-left: none;
+  border-right: none;
 }
 
 nav ul {
-    border-top: 1px solid white;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  border-top: 1px solid white;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 h3 {
-    margin-top: 0px;
-    padding: 10px;
-    border-bottom: 1px solid white;
+  margin-top: 0px;
+  padding: 10px;
+  border-bottom: 1px solid white;
 }
 
 .track {
-    margin-top: 1%;
-    padding: 2%;
-    background-color: black;
-    display: left;
-    justify-content: left;
-    font-size: 1.3em;
-    border: 7px double #42FF98;
+  margin-top: 1%;
+  padding: 2%;
+  background-color: #021826;
+  display: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  font-size: 1.3em;
+  border: 7px double #0B8C8C;
 }
 
 .controls {
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
 #link {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 a:hover {
-    color: #42FF98;
+  color: #0B8C8C;
 }
 
 /*Audioplayer*/
 .audio-player-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 30px;
 }
 
 /* .audio-player {
@@ -103,31 +109,30 @@ a:hover {
     flex-direction: row;
     justify-content: center;
 } */
-
 .audio-player-info {
-    margin: auto;
+  margin: auto;
 }
 
 .audioplayer-button {
-    height: 30px;
-    width: 30px;
-    margin: 2px;
-    background-color: white;
-    color: black;
-    padding: 10 px;
-    border-color: #42FF98;
+  height: 30px;
+  width: 30px;
+  margin: 2px;
+  background-color: white;
+  color: #021826;
+  padding: 10 px;
+  border-color: #0B8C8C;
 }
 
 .audioplayer-buttons {
-    margin-bottom: 10px;
-    margin-top: 20px;
-
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .audioplayer-button:hover {
-    border-style: inset;
+  border-style: inset;
 }
 
 .audioplayer-button:visited {
-    border-style: none;
+  border-style: none;
 }
+/*# sourceMappingURL=Nowe.css.map */
