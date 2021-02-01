@@ -1,0 +1,122 @@
+{
+    "contact": {
+        "country": "Belgium",
+        "city": "Ruiselede",
+        "telephone": "0492 67 48 05",
+        "email": "emiel.declercq97@gmail.com"
+    },
+    "values": ["Analytical", "Customer-oriented", "Teamplayer"],
+    "education": [{
+            "title": "Bachelor applied computer sciences",
+            "subtitle": "e-Business",
+            "school": "Hogeschool Gent",
+            "start_year": 2017,
+            "end_year": 2021
+        },
+        {
+            "title": "Economics and modern languages",
+            "school": "Emaüsinstituut Aalter",
+            "start_year": 2008,
+            "end_year": 2015
+        }
+    ],
+    "experience": [{
+        "title": "Data analist",
+        "company": "Moovly",
+        "start_year": 2020,
+        "start_month": "February",
+        "end_year": 2020,
+        "end_month": "May",
+        "description": "Internship, developping a prediction algorithm to determine possible subscribers and     developping an algorithm to classify registered users"
+    }, {
+        "title": "Assistent teacher",
+        "company": "Codefever vzw",
+        "start_year": 2018,
+        "end_year": 2020,
+        "description": "Guiding children in learning the basic concepts of programming"
+    }, {
+        "title": "Bar attendant",
+        "company": "Gent Jazz",
+        "start_year": 2019,
+        "start_month": "June",
+        "end_year": 2019,
+        "end_month": "July",
+        "description": "Serving customers, dispensing and serving drinks"
+    }, {
+        "title": "Application developper",
+        "company": "Open Summer of code (oSoc)",
+        "start_year": 2019,
+        "start_month": "July",
+        "end_year": 2019,
+        "end_month": "July",
+        "description": "Development of an IT project commissioned by the Flemisch government with a multilangual team"
+    }],
+    "projects": [{
+        "title": "Bachelorpaper: comparing prediction models for time series namely ARIMA, LSTM and Prophet",
+        "link": "https://github.com/DeclercqEmiel/Notebooks_BP",
+        "year": 2020,
+        "languages": ["Python"],
+        "tools": ["Pandas", "Jupyter notebooks"]
+    }, {
+        "title": "Personal website",
+        "link": "https://github.com/DeclercqEmiel/DeclercqEmiel.github.io",
+        "year": 2020,
+        "languages": ["Javascript", "HTML", "CSS"],
+        "tools": ["Vue", "Figma"]
+    }, {
+        "title": "User subscription prediction model Moovly",
+        "year": 2020,
+        "languages": ["Python", "R", "PHP"],
+        "tools": ["Pandas", "Jupyter notebooks"]
+    }, {
+        "title": "User classification model Moovly",
+        "year": 2020,
+        "languages": ["Python", "R", "PHP"],
+        "tools": ["Pandas", "Jupyter notebooks"]
+    }, {
+        "title": "IT project commissioned by the Flemisch government for improving their research portal",
+        "link": "https://github.com/oSoc19/fris",
+        "year": 2019,
+        "languages": ["Javascript", "HTML", "CSS"]
+    }],
+    "intrests": [
+        "music", "games"
+    ],
+
+    "programming_languages": [{
+        "language": "Java",
+        "level": 6
+    }, {
+        "language": "HTML",
+        "level": 8
+    }, {
+        "language": "CSS",
+        "level": 7
+    }, {
+        "language": "C#",
+        "level": 3
+    }, {
+        "language": "Angular",
+        "level": 3
+    }, {
+        "language": "Python",
+        "level": 7
+    }, {
+        "language": "UNIX",
+        "level": 3
+    }],
+
+    "languages": [{
+        "language": "Dutch",
+        "level": 10
+    }, {
+        "language": "English",
+        "level": 8
+    }, {
+        "language": "French",
+        "level": 4
+    }, {
+        "language": "German",
+        "level": 3
+    }]
+}
