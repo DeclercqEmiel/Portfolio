@@ -68,6 +68,7 @@ class PingComponent {
     this._ball.move();
     this.checkBounce();
     this.drawMiddleLine();
+    this.check;
 
     setTimeout(() => {
       this.toHtml();
