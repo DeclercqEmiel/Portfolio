@@ -1,0 +1,44 @@
+body {
+    background: url(../pic_trough_triangles.jpg);
+    background-size: 20%;
+    text-align: center;
+    color: black;
+    font-family: Comic Sans;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.class {
+    color: white;
+}
+
+img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.container {
+    background-color: black;
+    border: 5px ridge #3CE8BB;
+    width: 450px;
+}
+
+.track {
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 20px;
+    border: 5px ridge #3CE8BB;
+}
+
+.audio-player {
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+
+.audio-player-info {
+    margin-bottom: 5px;
+}
