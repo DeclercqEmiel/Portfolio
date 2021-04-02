@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,MAAM,EAAE,eAAe;CAC1B;;AAED,AAAA,MAAM,CAAC;EACH,gBAAgB,EAAE,UAAU;EAC5B,KAAK,EAAC,KAAK;CAEd;;AAED,AAAA,QAAQ,CAAC;EACL,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,cAAc,EAAE,MAAM;EACtB,UAAU,EAAE,MAAM;CAErB;;AACD,AAAA,YAAY,CAAA;EACR,MAAM,EAAC,IAAI;CACd",
+    "sources": [
+        "Snake.scss"
+    ],
+    "names": [],
+    "file": "Snake.css"
+}

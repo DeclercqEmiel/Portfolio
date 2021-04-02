@@ -1,0 +1,20 @@
+#snakeCanvas {
+    border: 2px solid black;
+}
+
+canvas {
+    background-color: whitesmoke;
+    width:500px;
+
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+#snakeCanvas{
+    margin:auto;
+}
