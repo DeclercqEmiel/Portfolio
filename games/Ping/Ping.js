@@ -6,6 +6,20 @@ class Ball {
     this._r = 5;
     this._x = x;
     this._y = y;
+    this._x_step = Math.sign(Math.random() - 0.5) * 5;
+    this._y_step = Math.sign(Math.random() - 0.5) * 5;
+  }
+
+  move() {
+    this._x = this._x - this._x_step;
+    this._y = this._y - this._y_step;
+  }
+
+  bouncePaddle() {
+    this._x_step = -this._x_step;
+  }
+  bounceWall() {
+    this._y_step = -this._y_step;
   }
 }
 
@@ -42,7 +56,7 @@ class PingComponent {
   constructor(window) {
     this._canvas = document.getElementById("canvas");
     this._context = this.canvas.getContext("2d");
-    this._ball = new Ball();
+    this._ball = new Ball(canvas.width / 2, canvas.height / 2);
     this._paddle1 = new Paddle(10, 225);
     this._paddle2 = new Paddle(480, 225);
   }
@@ -51,16 +65,38 @@ class PingComponent {
     this.resetCanvas();
     this.drawPaddles();
     this.drawBall();
+    this._ball.move();
+    this.checkBounce();
     this.drawMiddleLine();
 
     setTimeout(() => {
       this.toHtml();
-    }, 200);
+    }, 50);
+  }
+
+  checkBounce() {
+    let touchesLeftPaddle =
+      this._ball._x < 30 &&
+      this._ball._y > this._paddle1._y &&
+      this._ball._y < this._paddle1._y + 50;
+    let touchesRightPaddle =
+      this._ball._x > 470 &&
+      this._ball._y > this._paddle2._y &&
+      this._ball._y < this._paddle2._y + 50;
+    if (touchesLeftPaddle || touchesRightPaddle) {
+      this._ball.bouncePaddle();
+    }
+
+    let touchesTopWall = this._ball._y < 10;
+    let touchesBottomWall = this._ball._y > 490;
+    if (touchesTopWall || touchesBottomWall) {
+      this._ball.bounceWall();
+    }
   }
 
   drawBall() {
     this.context.beginPath();
-    this.context.arc(canvas.width / 2, canvas.height / 2, 5, 0, 2 * Math.PI);
+    this.context.arc(this._ball._x, this._ball._y, 5, 0, 2 * Math.PI);
     this.context.fill();
     this.context.stroke();
   }
@@ -113,7 +149,7 @@ function init() {
   let up = false;
   let down = false;
 
-  document.body.onkeydown = event => {
+  document.body.onkeydown = (event) => {
     switch (event.keyCode) {
       case 65:
         a = true;
@@ -131,7 +167,7 @@ function init() {
     move();
   };
 
-  document.body.onkeyup = event => {
+  document.body.onkeyup = (event) => {
     switch (event.keyCode) {
       case 65:
         a = false;
