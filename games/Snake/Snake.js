@@ -1,7 +1,6 @@
 let gameTick = 0;
 let directions = [[0, 0, -10]];
-let belly = [];
-let addSegment = false;
+let snekspeed = 1
 
 class Segment {
   constructor(xTopLeft, yTopLeft, color, xDirection, yDirection) {
@@ -62,6 +61,9 @@ class Body {
       new Segment(240, 240, "#cccc00", 0, -10),
       new Segment(240, 250, "#00cc00", 0, -10)
     ];
+    this._belly = []
+    this.has_feces = false
+    this.feces = null
   }
   get segments() {
     return this._segments;
@@ -143,7 +145,7 @@ class SnakeComponent {
 
   drawBody() {
     for (let i = 0; i < this.body._segments.length; i++) {
-        
+
       const segment = this.body._segments[i];
 
       directions.forEach(direction => {
@@ -153,32 +155,17 @@ class SnakeComponent {
         }
       });
 
-      //grow Body
-      // last element of array & belly has a value
-    //   if (i === this.body._segments.length - 1 && belly.length > 0) {
-    //     const bellyS = belly.pop().segment;
-    //     console.log(bellyS._yTopLeft);
-    //     const newLastSegment = new Segment(
-    //       bellyS._xTopLeft,
-    //       bellyS._yTopLeft,
-    //       "#0000FF",
-    //       segment.xDirection,
-    //       segment.yDirection
-    //     );
-    //     // newLastSegment._xTopLeft -= newLastSegment.xDirection;
-    //     // newLastSegment._yTopLeft -= newLastSegment.yDirection;
-    //     this.body._segments.push(newLastSegment);
-    //   }
+      // Add to tail if feces from last gametick were detected
+      if (this._body.has_feces) {
+        this.body._segments.push(this._body._feces)
+      }
 
-    if(addSegment){
-        belly.push(belly[belly.length-1])
-        addSegment = false;
-    }
-
-    
-    if(this.checkFood()){
-        addSegment = true;
-    }
+      // Prepare feces if food reached the end of the belly
+      this._body.has_feces = this._body._belly.pop()
+      if (this._body.has_feces) {
+        let last_tail = this.body._segments[this.body._segments.length - 1]
+        this._body._feces = new Segment(last_tail.xTopLeft - last_tail.xDirection, last_tail.yTopLeft - last_tail.yDirection, last_tail.color, last_tail.xDirection, last_tail.yDirection)
+      }
 
       //Assigning new position
       segment.xTopLeft += segment.xDirection;
@@ -186,43 +173,71 @@ class SnakeComponent {
 
       this.drawSegment(segment);
     }
-    console.log(belly)
   }
 
-  addSegment() {
-
-  }
 
   drawFood() {
     this.drawSegment(this._food.segment);
   }
 
   checkFood() {
-    return  this.food.segment.xTopLeft === this.body.segments[0].xTopLeft && this.food.segment.yTopLeft === this.body.segments[0].yTopLeft
+    return this.food.segment.xTopLeft === this.body.segments[0].xTopLeft && this.food.segment.yTopLeft === this.body.segments[0].yTopLeft
   }
 
-  removeFood() {}
+  eat() {
+    this._
+    this._body._belly.unshift(true);
+  }
 
-  checkBorder() {}
+  fillBelly() {
+    this._body._belly.unshift(false)
+  }
+
+  removeFood() { }
+
+  checkBorder() { }
 
   resetCanvas() {
     this.canvas.width = this.canvas.width;
   }
 
+  checkLoseCondition() {
+    let head = this._body._segments[0]
+    let segments = this._body._segments
+    segments.slice(1).forEach(function (segment) {
+      let self_touch = head._xTopLeft == segment._xTopLeft && head._yTopLeft == segment._yTopLeft
+      let wall_touch = segment._xTopLeft < 0 || segment._yTopLeft < 0
+      if (self_touch || wall_touch) {
+        window.alert("Game over! Score: "+(segments.length*100-200).toString());
+        location.reload();
+      }
+    });
+    return false
+  }
+
+  updateScore() {
+    document.getElementById('score').innerHTML = "Score: "+(this._body._segments.length*100-100).toString();
+  }
+
   toHtml() {
     this.resetCanvas();
     this.drawFood();
-    this.drawBody();
-    //console.log(this.body.segments);
+
     if (this.checkFood()) {
-      // growBody();
+      this.eat()
       this.food = new Food();
+      this.updateScore();
+     
     }
+    this.fillBelly()
+    this.drawBody();
+    this.checkLoseCondition()
     gameTick++;
+
 
     setTimeout(() => {
       this.toHtml();
-    }, 200);
+    }, 200 * snekspeed);
   }
 }
 
