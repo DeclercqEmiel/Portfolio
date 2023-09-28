@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'ffff';
-  src: URL('https://github.com/DeclercqEmiel/Portfolio/blob/live/games/Snake/fonts/FFFFORWA.TTF') format('truetype');
+  src: URL('../../fonts/FFFFORWA.TTF') format('truetype');
 }
 
 #snakeCanvas {
