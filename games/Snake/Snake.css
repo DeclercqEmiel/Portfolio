@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'FFF Forward';
-  src: URL('../../../fonts/FFFFORWA.TTF') format('truetype');
+  src: URL('Portfolio/games/Snake/fonts/FFFFORWA.TTF') format('truetype');
 }
 
 #snakeCanvas {
