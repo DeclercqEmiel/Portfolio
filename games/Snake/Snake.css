@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'ffff';
-  src: URL('../fonts/FFFFORWA.TTF') format('truetype');
+  font-family: 'FFF Forward';
+  src: URL('../../../fonts/FFFFORWA.TTF') format('truetype');
 }
 
 #snakeCanvas {
@@ -43,7 +43,7 @@ body{
 }
 
 h1{
-  font-family: FFF Forward;
+  font-family: 'FFF Forward';
   color:yellow;
 }
 
