@@ -42,3 +42,9 @@ img {
 .audio-player-info {
     margin-bottom: 5px;
 }
+
+.audioplayer-button {
+    background-color: white;
+    border: white;
+    padding: 25px;
+}
