@@ -131,3 +131,8 @@ a:hover {
 .audioplayer-button:visited {
     border-style: none;
 }
+
+.ep-navbar{
+    align-content: left;
+    text-align: left;
+}
